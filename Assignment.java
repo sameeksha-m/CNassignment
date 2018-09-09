@@ -5,7 +5,7 @@ public class Assignment {
 
 	public static void main(String[] args) {
 		float t1,t2,d1,d2,m,a,s;
-		float tdA,pdA,tdB,pdB,routerTime,hostB;
+		float tdA,pdA,tdR,pdR,routerTime,hostB;
     float ackA=0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Bandwidth t1 in Mbps: ");
@@ -29,8 +29,8 @@ public class Assignment {
 			pdA = d1/(s*100);                                         // propogation delay from A to R
 			routerTime =ackA + tdA + pdA;                            // time taken to reach router from A
 			System.out.println("Time taken for packet " +i+" to reach router: "+routerTime+" ms");
-			tdB = m/(t2*1000);                                        //transmission delay in R
-			pdB = (d2/(s*100));                                         //propogation delay from R to B
+			tdR = m/(t2*1000);                                        //transmission delay in R
+			pdR = (d2/(s*100));                                         //propogation delay from R to B
 			hostB = routerTime + tdB + pdB;                          //time taken for the packet to reach host B
 			System.out.println("Time taken for packet "+i+" to reach host B: "+hostB+" ms");
 			float aB=a/(t2*1000);                                     //transmission delay for acknowledgement at B     
