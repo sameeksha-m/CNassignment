@@ -1,0 +1,88 @@
+RESULT:
+
+Bandwidth t1 in Mbps: 
+1
+Bandwidth t2 in Mbps: 
+2
+Distance from host A to router d1(in km):  
+100
+Distance from router to host B d2(in km):  
+200
+Packet size in bits M: 
+10000
+Acknowledgement size in bits A: 
+1000
+Speed of communication S*10^5(in km/s): 
+2
+
+Time taken for packet 1 to reach router: 10.5 ms
+Time taken for packet 1 to reach host B: 16.5 ms
+Time after receiving acknowledgement from host B: 19.5 ms
+
+Time taken for packet 2 to reach router: 30.0 ms
+Time taken for packet 2 to reach host B: 36.0 ms
+Time after receiving acknowledgement from host B: 39.0 ms
+
+BUILD SUCCESSFUL (total time: 20 seconds)
+
+DESCRIPTION:
+
+With the parameters taken as:
+bandwidth1(t1)=1 Mbps
+bandwidth2(t2)=2 Mbps
+distance1(d1)=100 km
+distance2(d2)=200 km
+packet size (M)=10000 bits
+acknowledgement size (A)=1000 bits
+speed of communication (S)= 2*10^5 km/s
+     We need to find the total end-to-end delay with an acknowledgement for two packets.
+
+                             Transmission delay= data size/bandwidth.
+                             
+                             Propogation delay= distance/transmission speed. 
+
+PACKET 1:
+       The first packet is transmitted from host A to router R which includes transmission and propogation.
+
+transmission delay(tdA):    10000 bits/1 Mbps
+                            = 10.0 ms.
+
+propogation delay(pdA):     100 km/(2*10^5 km/s)
+                            = 0.5 ms.
+
+      The first packet is then transmitted from router R to host B which includes transmission and propogation.
+
+transmission delay(tdR):    10000 bits/2 Mbps
+                            = 5.0 ms.
+
+propogation delay(pdR):     200 km/(2*10^5 km/s)
+                            = 1.0 ms.
+
+Therefore, the time taken from host A to host B = 16.5 ms.
+Now host B should send an acknowledgement to host A.The second packet cannot be transmitted till the acknowledgement is sent from B.
+
+transmission delay(aB):    1000 bits/2 Mbps
+                            = 0.5 ms.
+
+propogation delay(pdR):     200 km/(2*10^5 km/s)
+                            = 1.0 ms.
+
+transmission delay(aR):    1000 bits/1 Mbps
+                            = 1.0 ms.
+
+propogation delay(pdA):     100 km/(2*10^5 km/s)
+                            = 0.5 ms.
+ 
+The time taken for the acknowledgement to reach host A = 19.5 ms
+The same process is followed when the second packet is sent.
+
+        Hence,the total end-to-end delay after recieving the second packet's acknowledgement is 39.0 ms.
+
+
+
+
+       
+
+
+
+
