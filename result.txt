@@ -1,4 +1,4 @@
-**RESULT:**
+RESULT:
 
 Bandwidth t1 in Mbps: 
 1
@@ -25,7 +25,7 @@ Time after receiving acknowledgement from host B: 39.0 ms
 
 BUILD SUCCESSFUL (total time: 20 seconds)
 
-**DESCRIPTION:**
+DESCRIPTION:
 
 With the parameters taken as:
 bandwidth1(t1)=1 Mbps
@@ -41,7 +41,7 @@ speed of communication (S)= 2*10^5 km/s
                              
                              Propogation delay= distance/transmission speed. 
 
-**PACKET 1:**
+PACKET 1:
        The first packet is transmitted from host A to router R which includes transmission and propogation.
 
 transmission delay(tdA):    10000 bits/1 Mbps
