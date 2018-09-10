@@ -27,7 +27,7 @@ The second packet is transmitted from host A to router R which includes transmis
 The second packet is then transmitted from router R to host B which includes transmission and propogation.
 Now host B should send an acknowledgement to host A.The second packet cannot be transmitted till the acknowledgement is sent from B.
 
-*After host A recieves the acknowledgement from host B,the total end-to-end delay is noted.
+After host A recieves the acknowledgement from host B,the total end-to-end delay is noted.
 
 **Challenges/Issues faced while writing the program:**
 We thought we had to use ns2 which was the wrong approch.
