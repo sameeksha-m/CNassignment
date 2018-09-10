@@ -27,11 +27,11 @@ public class Assignment {
 		{
 			tdA = m/(t1*1000);                                        //transmission delay in A
 			pdA = d1/(s*100);                                         // propogation delay from A to R
-			routerTime =ackA + tdA + pdA;                            // time taken to reach router from A
+			routerTime =ackA + tdA + pdA;                             // time taken to reach router from A
 			System.out.println("Time taken for packet " +i+" to reach router: "+routerTime+" ms");
 			tdR = m/(t2*1000);                                        //transmission delay in R
-			pdR = (d2/(s*100));                                         //propogation delay from R to B
-			hostB = routerTime + tdB + pdB;                          //time taken for the packet to reach host B
+			pdR = (d2/(s*100));                                       //propogation delay from R to B
+			hostB = routerTime + tdB + pdB;                           //time taken for the packet to reach host B
 			System.out.println("Time taken for packet "+i+" to reach host B: "+hostB+" ms");
 			float aB=a/(t2*1000);                                     //transmission delay for acknowledgement at B     
       float aR= a/(t1*1000);                                                      //transmission delay for acknowledgement at R
